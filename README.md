@@ -1,6 +1,6 @@
 # EHRsourceVariability
 
-Measurement and visualization of biomedical data heterogeneity across data sources
+Measuring and visualizing biomedical data heterogeneity across data sources
 
 ## What is this repository for?
 
