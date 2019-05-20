@@ -1,4 +1,4 @@
-# EHRsourceVariability
+# EHRsourceVariability (under-development version)
 
 Measuring and visualizing biomedical data heterogeneity across data sources
 
