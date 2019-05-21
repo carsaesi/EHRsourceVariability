@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#' Estimates the GPD and SPOmulti-source variability metrics and the corresponding source projection vertices from a matrix of probability distributions of different data sources
+#' Plots a Multi-Source Variability plot based on the results of estimateMSVmetrics.
 #'
 #' @name plotMSV
 #' @rdname plotMSV-methods
@@ -49,7 +49,7 @@
 #'
 #' # We estimate the MSV metrics
 #'
-#' msvMetrics = multisourcestability(probMatrix)
+#' msvMetrics = estimateMSVmetrics(probMatrix)
 #' idSource = levels(ID_SOURCE)
 #'
 #' nBySource = table(ID_SOURCE)
@@ -58,7 +58,7 @@
 #'
 #' }
 #' @export
-estimateMSVmetrics <- function(msvMetrics, nBySource, idSource) {
+plotMSV <- function(msvMetrics, nBySource, idSource) {
 p <- plotly::plot_ly(x = msvMetrics$Vertices[,1], y = msvMetrics$Vertices[,2], z = msvMetrics$Vertices[,3],
         color = msvMetrics$SPOs,
         size = as.integer(nBySource),
