@@ -12,15 +12,18 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#' Estimates the GPD and SPOmulti-source variability metrics and the corresponding source projection vertices from a matrix of probability distributions of different data sources
+#' Estimates the GPD and SPO multi-source variability metrics and the corresponding source projection vertices from a matrix of probability distributions of different data sources
 #'
 #' @name estimateMSVmetrics
 #' @rdname estimateMSVmetrics-methods
-#' @param probabilities m-by-n matrix containing the probability mass of n data sources on m distribution bins
-#' @return A list containing the following results:
-#' 	GPD       	the value of the Global Probabilistic Deviation metric, where 0 means equal distributions and 1 means non-overlapping distributions
-#' 	SPOs      	the values of Source Probabilistic Outlyingness for each data source, where 0 means equal to central tendency and 1 completely non-overlapping
-#' 	Vertices	a n-by-(n-1) matrix containing the coordinates of each data source in the projected probabilistic space conserving their dissimilarities, e.g, for 3D projections the 3 first columns can be used
+#' @param probabilities m-by-n matrix containing the probability mass of n data sources
+#'  on m distribution bins
+#' @return A list containing the following results. GPD: the value of the Global Probabilistic
+#'  Deviation metric, where 0 means equal distributions and 1 means non-overlapping distributions.
+#'   SPOs: the values of Source Probabilistic Outlyingness for each data source, where 0 means equal
+#'    to central tendency and 1 completely non-overlapping. Vertices: a n-by-(n-1) matrix containing
+#'     the coordinates of each data source in the projected probabilistic space conserving their
+#'      dissimilarities, e.g, for 3D projections the 3 first columns can be used
 #' @export
 estimateMSVmetrics <- function(probabilities) {
 

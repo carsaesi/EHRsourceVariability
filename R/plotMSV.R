@@ -59,12 +59,12 @@
 #' }
 #' @export
 plotMSV <- function(msvMetrics, nBySource, idSource) {
-p <- plotly::plot_ly(x = msvMetrics$Vertices[,1], y = msvMetrics$Vertices[,2], z = msvMetrics$Vertices[,3],
-        color = msvMetrics$SPOs,
-        size = as.integer(nBySource),
-        marker = list(sizemode = 'diameter'),
-        text = idSource
-) %>%  plotly::layout(title = sprintf("Multi-Source Variability plot")) %>%
-  plotly::add_markers()
-return(p)
+  p <- plotly::plot_ly(x = msvMetrics$Vertices[,1], y = msvMetrics$Vertices[,2], z = msvMetrics$Vertices[,3],
+                       color = msvMetrics$SPOs,
+                       size = as.integer(nBySource),
+                       marker = list(sizemode = 'diameter'),
+                       text = idSource
+  ) %>%  plotly::layout(title = sprintf("Multi-Source Variability plot")) %>%
+    plotly::add_markers()
+  return(p)
 }
